@@ -1,0 +1,41 @@
+.result{
+    /*margin*/
+    display: grid;
+    margin-top: 20vh;
+    place-content: center;
+}
+.show_result{
+    font-family: 'Futura';
+    font-size: 3vh;
+    text-align: center;
+    background-color: #ffffff;
+    border-color: #444444;
+    border: 0.3vh solid;
+    width: 20vh;
+    /*padding*/
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+
+button{
+    font-family: 'Futura';
+    font-size: 1.3em;
+    border-color: red;
+    width: 7vh;
+    height: 7vh;
+    background-color: #e6e6e6;
+    margin: 1vh;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #ffd8d8;
+}
+
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
