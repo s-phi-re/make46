@@ -1,11 +1,19 @@
+.title{
+    font-family: 'Futura';
+    font-size: 3vh;
+    text-align: center;
+    margin-top: 10vh;
+}
+
 .result{
     /*margin*/
     display: grid;
-    margin-top: 20vh;
+    margin-top: 5vh;
     place-content: center;
 }
 .show_result{
     font-family: 'Futura';
+    color:black;
     font-size: 3vh;
     text-align: center;
     background-color: #ffffff;
@@ -15,6 +23,24 @@
     /*padding*/
     padding-top: 1vh;
     padding-bottom: 1vh;
+}
+
+.tweet-container{
+    display: grid;
+    place-content: center;
+    margin-top:5vh;
+}
+.tweet{
+    font-size: 2.4vh;
+    font-family: 'Futura';
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    display: none;
 }
 
 
@@ -37,5 +63,5 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 30vh;
 }
