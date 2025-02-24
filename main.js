@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let judge = true;
     let color = 255;
     let number = 0;
+    let stock = 0;
+    let current = 0;
     const answer = 46;
     const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
@@ -11,13 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 const result = document.querySelector('.show_result');
                 number = event.target.id;
                 count++;
-                result.innerHTML = count * number;
+                current = ((count * number) + stock);
+                result.innerHTML = current;
                 const originalColor = 'rgb(255,255,255)';
                 result.style.backgroundColor = 'rgb(255,65,65)';
                 color = 65;
-                if (count * number === answer) {
+                if (current === answer) {
                     judge = false;
-                    result.innerHTML = count * number;
+                    result.innerHTML = current;
                     result.style.backgroundColor = 'rgb(255,65,65)';
                     result.style.color = 'rgb(255,255,255)';
                 } else {
@@ -31,16 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     }, 20);
                 }
+                stock = Number(number);
 
                 setTimeout(() => {
-                    if (count * number === answer) {
+                    if (current === answer) {
                         judge = false;
                         result.style.backgroundColor = 'rgb(255,65,65)';
                         result.style.color = 'rgb(255,255,255)';
                     }
                 }, 480);
                 setTimeout(() => {
-                    if (count * number === answer) {
+                    if (current === answer) {
                         result.innerHTML = 'CLEAR!';
                         count = 0;
                         const tweet = document.querySelector('.tweet');
