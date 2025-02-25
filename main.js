@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let number = 0;
     let stock = 0;
     let current = 0;
-    const answer = 22;
+    const answer = 71;
     const buttons = document.querySelectorAll('.buttons button');
     buttons.forEach(button => {
         button.addEventListener('click', function (event) {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const result = document.querySelector('.show_result');
                 number = event.target.id;
                 count++;
-                current = ((count * number) + stock);
+                current = ((count * number)) + current;
                 result.innerHTML = current;
                 const originalColor = 'rgb(255,255,255)';
                 result.style.backgroundColor = 'rgb(255,65,65)';
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         const tweet = document.querySelector('.tweet');
                         tweet.style.display = 'block';
                     }
-                }, 3800);
+                }, 3000);
             } else {
                 /*クリア後は何も起きない*/
             }
