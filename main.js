@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const reset = document.getElementById('reset');
     reset.addEventListener('click', function () {
         if (judge && color === 255) {
-            alert('reset');
             current = 0;
             stock = 0;
             count = 0;
