@@ -43,25 +43,41 @@
     display: none;
 }
 
-
-button{
-    font-family: 'Futura';
-    font-size: 1.3em;
-    border-color: red;
-    width: 7vh;
-    height: 7vh;
-    background-color: #e6e6e6;
-    margin: 1vh;
-    cursor: pointer;
-}
 button:hover{
     background-color: #ffd8d8;
 }
-
 
 .buttons{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 20vh;
+
+    button{
+        font-family: 'Futura';
+        font-size: 1.3em;
+        border-color: red;
+        width: 7vh;
+        height: 7vh;
+        background-color: #e6e6e6;
+        margin: 1vh;
+        cursor: pointer;
+    }
+}
+
+.reset_container{
+    display: grid;
+    place-content: center;
+    margin-top: 0vh;
+
+    button{
+        font-family: 'Futura';
+        font-size: 1.2vh;
+        border-color: blue;
+        width: 10vh;
+        height: 3vh;
+        background-color: #e6e6e6;
+        margin: 1vh;
+        cursor: pointer;
+    }
 }

@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let number = 0;
     let stock = 0;
     let current = 0;
-    const answer = 46;
-    const buttons = document.querySelectorAll('button');
+    const answer = 22;
+    const buttons = document.querySelectorAll('.buttons button');
     buttons.forEach(button => {
         button.addEventListener('click', function (event) {
             if (judge && color === 255) {
@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     result.innerHTML = current;
                     result.style.backgroundColor = 'rgb(255,65,65)';
                     result.style.color = 'rgb(255,255,255)';
+                    const reset = document.getElementById('reset');
+                    reset.style.display = 'none';
                 } else {
                     let fadeout = setInterval(() => {
                         color += 10;
@@ -50,10 +52,34 @@ document.addEventListener('DOMContentLoaded', function () {
                         const tweet = document.querySelector('.tweet');
                         tweet.style.display = 'block';
                     }
-                }, 2000);
+                }, 3800);
             } else {
                 /*クリア後は何も起きない*/
             }
         });
+    });
+    const reset = document.getElementById('reset');
+    reset.addEventListener('click', function () {
+        if (judge && color === 255) {
+            alert('reset');
+            current = 0;
+            stock = 0;
+            count = 0;
+            judge = true;
+            color = 255;
+            const result = document.querySelector('.show_result');
+            result.innerHTML = current;
+            color = 65;
+            let fadeout = setInterval(() => {
+                color += 10;
+                result.style.backgroundColor = `rgb(${color},${color},255)`;
+                if (color === 255) {
+                    clearInterval(fadeout);
+                    result.style.backgroundColor = originalColor;
+                }
+            }, 20);
+        } else {
+            /*クリア後は何も起きない*/
+        }
     });
 });
